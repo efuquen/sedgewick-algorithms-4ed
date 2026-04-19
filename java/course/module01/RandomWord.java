@@ -4,14 +4,13 @@ import edu.princeton.cs.algs4.StdRandom;
 
 import java.util.Optional;
 
-class RandomWord {
+public class RandomWord {
     public static void main(String[] args) {
         Optional<String> champion = Optional.empty();
         int i = 1;
         while (!StdIn.isEmpty()) {
             String currentWord = StdIn.readString();
             if (!champion.isPresent() || StdRandom.bernoulli(1.0/i)) {
-                System.out.println("currentWord=" + currentWOrd);
                 champion = Optional.of(currentWord);
             }
             i += 1;
